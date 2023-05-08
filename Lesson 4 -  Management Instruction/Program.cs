@@ -147,17 +147,119 @@ namespace Lesson_4____Management_Instruction
             //    _ => "None of them"
             //};
 
-            (int age, string name, bool gender, string surname) = (2, "Jhon", true,"Adam");
+            //(int age, string name, bool gender, string surname) = (2, "Jhon", true,"Adam");
 
-            switch (name, age)
-            {
-                case ("Jhon", 20) when age > 10:
-                    Console.WriteLine($"Jhon surname is {surname}");
-                    break;
-                case ("Jhon", 2) when age < 10:
-                    Console.WriteLine($"Jhon is less than 10 age. Jhon surname is {surname}");
-                    break;
-            }
+            //switch (name, age)
+            //{
+            //    case ("Jhon", 20) when age > 10:
+            //        Console.WriteLine($"Jhon surname is {surname}");
+            //        break;
+            //    case ("Jhon", 2) when age < 10:
+            //        Console.WriteLine($"Jhon is less than 10 age. Jhon surname is {surname}");
+            //        break;
+            //}
+
+
+            #region Task 1-2
+
+            //Console.WriteLine("Enter 3 numbers");
+
+            //int first = int.Parse(Console.ReadLine());
+            //int second = int.Parse(Console.ReadLine());
+            //int third = int.Parse(Console.ReadLine());
+            ////int max = default;
+
+            //if (first >= second && first >= third)
+            //    Console.WriteLine("Max is first : " + first);
+            //else if (second >= first && second >= third)
+            //    Console.WriteLine("Max is second : " + second);
+            //else if (third >= first && third >= second)
+            //    Console.WriteLine("Max is third : " + third);
+
+
+
+            #endregion
+
+            #region Task 6
+
+            //int a = 21;
+
+            //Console.WriteLine("Enter one number : ");
+            //int first = int.Parse(Console.ReadLine());
+
+            //if (first > a)
+            //{
+            //    Console.WriteLine("daha kicik eded daxil edin!");
+            //}
+            //else if (first < a)
+            //{
+            //    Console.WriteLine("daha boyuk eded daxil edin!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("duzgun ededi tapdiniz");
+            //    return;
+            //}
+
+            //Console.WriteLine("Enter one number : ");
+            //first = int.Parse(Console.ReadLine());
+
+            //if (first > a)
+            //{
+            //    Console.WriteLine("daha kicik eded daxil edin!");
+            //}
+            //else if (first < a)
+            //{
+            //    Console.WriteLine("daha boyuk eded daxil edin!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("duzgun ededi tapdiniz metni cixsin");
+            //    return;
+            //}
+
+            //Console.WriteLine("Enter one number : ");
+            //first = int.Parse(Console.ReadLine());
+
+            //if (first > a)
+            //{
+            //    Console.WriteLine("oyun bitdi uduzdunuz");
+            //}
+            //else if (first < a)
+            //{
+            //    Console.WriteLine("oyun bitdi uduzdunuz");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("duzgun ededi tapdiniz metni cixsin");
+            //    return;
+            //}
+
+            //Console.WriteLine("oyun bitdi uduzdunuz");
+            #endregion
+
+            //double a = Math.Round(1/3f,2);
+
+            //Console.WriteLine(a);
+
+            //int num = int.Parse(Console.ReadLine());
+
+            //int count = (int)Math.Log10(num) + 1;
+
+            //Console.WriteLine(count);
+
+
+            //Task 10
+            //int a = 10, b = 15, c = 13;
+
+            //if (a + b > c && b + c > a && a + c > b)
+            //{
+            //    Console.WriteLine("Bu duzgun ucbucaqdir");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Bu ucbucaq duzgun ucbucaq deyil");
+            //}
 
         }
     }
