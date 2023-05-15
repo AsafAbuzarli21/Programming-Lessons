@@ -1,4 +1,6 @@
-﻿namespace Loop_Instruction
+﻿using System.Runtime.InteropServices;
+
+namespace Loop_Instruction
 {
     internal class Program
     {
@@ -279,6 +281,53 @@
             //}
 
             #endregion
+
+            //Console.WriteLine("Please add one number :");
+            //int n = int.Parse(Console.ReadLine());
+
+            //int sum = 0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    sum += i % 2 == 0 ? 0 : i;
+
+            //    //if (i % 2 == 1)
+            //    //    sum += i;
+            //}
+
+            //Console.WriteLine("Sum of odd numbers " + sum);
+
+
+
+            //int n = 10, iteration = 1;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    for (int j = 0; j < i; j++)
+            //    {
+            //        Console.Write(iteration + " ");
+            //        iteration++;
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //int n = 10;
+
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    for (int k = n; k > n - i; k--)
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    for (int j = n; j > i; j--)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
+
         }
     }
 }
