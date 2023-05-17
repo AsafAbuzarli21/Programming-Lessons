@@ -677,6 +677,202 @@
             #endregion
 
             #endregion
+
+
+            #region String
+            //int? a;
+
+            ////string interpolation
+            //string sentence = $"Hello \"worlds!\"";
+
+            ////string sentence2 = ;
+            //char[] chars = { 'H', 'e', 'l', 'l' };
+
+            //string test = "";
+
+            ////Verbatim 
+            //Console.WriteLine(@"Hello world");
+
+            //string test = " ";
+
+            //string.IsNullOrWhiteSpace(test);
+
+            //string.IsNullOrEmpty(test);
+
+            //if (string.IsNullOrEmpty(test))
+            //{
+            //    Console.WriteLine("This is not correct format");
+            //}
+
+            //string a = "Azerbaycan Respublikasi";
+
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    Console.Write(a[i]);
+            //}
+
+            //String Formatting
+
+            //1
+
+            //string name = "Tofiq";
+            //string surname = "Quliyev";
+            //byte age = 22;
+
+            //name = "Nicat";
+
+
+            //Console.WriteLine("Name is {0}, Surname is {1}, Age is {2}, {3}", name, surname, age, null);
+
+
+            //2 
+            //string test3 = "asd
+            //                    ";
+
+            //Escape characters
+
+            //string name = @"Tofiq";
+            //string surname = "Quliyev";
+            //byte age = 22;
+
+            //1
+            // \t - 1 tab bosluq
+            //string test = $" Name is {name}\tSurname is {surname}\tAge is {age}\ttest";
+
+            //2
+            // \n - Enter
+            // string test = $" Name is {name}\nSurname is {surname}\nAge is {age}\ntest";
+
+
+            //3
+            // \a - "bip" sound
+            //string test = $" Name is {name}\a Surname is {surname}\a Age is {age}\atest";
+
+            //4
+            // \b - 
+            //string test = $" Name is {name}\b Surname is {surname}\b Age is {age}\btest";
+
+            //5
+            // \v - asagi tab
+            //string test = $"Name is {name}\v Surname is {surname}\v Age is {age}\v test";
+
+            //6
+            // \" \'
+
+            // \f - ctrl + enter - yeni sehife
+
+            //string test = $" \\b - \"Bip\" sound \n\\t - tab";
+
+            //Console.WriteLine(test);
+
+
+            //Contains
+            //bool true - false
+            //Console.WriteLine(test.Contains("Azər"));
+
+            //StartWith
+            //Console.WriteLine(test.StartsWith("Aerrt"));
+
+            //EndsWith
+            //Console.WriteLine(test.EndsWith("Akademiyası"));
+
+            //CompareTo
+            //Compare 
+            //space - 32
+            // A - 65
+            // a - 97
+            // B - 66
+
+
+            //string test = "Azərbayc";
+            //string test2 = "azərbayc";
+            //int a = 0;
+
+            //for (int i = 0; i < test.Length; i++)
+            //{
+            //    for (int j = 0; j < test2.Length; j++)
+            //    {
+            //        if (test[i] == test2[j])
+            //            continue;
+            //        else if (test[i] > test2[j])
+            //        {
+            //            a = 1;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            a = -1;
+            //        }
+
+            //    }
+            //}
+
+            //Console.WriteLine(a);
+
+
+            //Console.WriteLine(string.Compare("BB", "aaa"));
+
+            //Console.WriteLine(string.Compare("ac", "aaasdfdrgsedgertg"));
+
+            //Console.WriteLine(string.Compare("BB", "BBB"));
+
+            //IndexOf
+
+            //string test = "Jed Academy";
+
+            //Console.WriteLine(test.IndexOf('a'));
+
+            //Insert
+            //string test1 = "Jed Academy";
+            //Console.WriteLine(test1.Insert(3, "test1"));
+
+            //Remove
+            //string test1 = "Jed Academy";
+            //Console.WriteLine(test1.Remove(3, 1));
+
+            //Replace
+
+            //string test = "Jed Academy A A A A A A A";
+            //Console.WriteLine(test.Replace('A', 'a'));
+
+            //Split
+
+            //string metn = "Azerbaycan Respublikasinin Dovlet Bayragi,test,test2,test3";
+
+            //var strArr = metn.Split(' ',',');
+            //Console.WriteLine(metn);
+
+            //foreach (var str in strArr)
+            //{
+            //    Console.WriteLine(str);
+            //}
+
+            //Substring
+
+            //string metn = "Azerbaycan Respublikasinin Dovlet Bayragi,test,test2,test3";
+            //Console.WriteLine(metn.Substring(10, 20));
+            //Console.WriteLine(metn.Substring(10));
+
+
+            //ToUpper
+            //ToLower
+            //string metn = "    Azərbaycan Respublikasinin Dovlet Bayragi,test,test2,test3   ";
+            //string test = "...";
+            //Console.WriteLine(metn.ToLower());
+           // Console.WriteLine(metn.ToUpper());
+
+            //Trim
+
+            //TrimEnd
+
+            //Console.Write(metn.TrimEnd());
+            //Console.WriteLine(test);
+
+            //TrimStart
+            //Console.WriteLine(metn.TrimStart());
+
+
+            #endregion
         }
 
         public static int[] GetMethod(string[] strArr)
