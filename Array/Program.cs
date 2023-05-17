@@ -1,14 +1,10 @@
-﻿
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace Array2
+﻿namespace Array2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            #region 12.05.2023
             //byte jhon = 28;
             //byte jane = 40;
             //byte kate = 24;
@@ -273,6 +269,9 @@ namespace Array2
             //    Console.WriteLine(i);
             //}
 
+            #endregion
+
+            #region 15.05.2023
             #region Task 1
 
             //var arr = Console.ReadLine().Split(" ");
@@ -465,35 +464,220 @@ namespace Array2
 
             #endregion
 
-
             #region task 9
 
-            Console.WriteLine("Please enter first numbers ");
-            var arr = Console.ReadLine().Split(" ");
+            //Console.WriteLine("Please enter first numbers ");
+            //var arr = Console.ReadLine().Split(" ");
 
-            int[] nums1 = GetMethod(arr);
+            //int[] nums1 = GetMethod(arr);
 
-            Console.WriteLine("Please enter first numbers ");
-            arr = Console.ReadLine().Split(" ");
+            //Console.WriteLine("Please enter first numbers ");
+            //arr = Console.ReadLine().Split(" ");
 
-            int[] nums2 = GetMethod(arr);
+            //int[] nums2 = GetMethod(arr);
 
-            int[] nums3 = new int[nums1.Length + nums2.Length];
+            //int[] nums3 = new int[nums1.Length + nums2.Length];
 
-            for (int i = 0; i < nums1.Length; i++)
+            //for (int i = 0; i < nums1.Length; i++)
+            //{
+            //    nums3[i] = nums1[i];
+            //}
+
+            //for (int i = 0; i < nums2.Length; i++)
+            //{
+            //    nums3[i + nums1.Length] = nums2[i];
+            //}
+
+            //foreach (var item in nums3)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            #endregion
+
+            #endregion
+
+            #region 17.05.2023
+
+            #region Task 1 
+
+            //int[] arr = new int[6] { 21, 43, 2, 3, 45, 6 };
+            //int[] secondArr = new int[6];
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    secondArr[i] = arr[i];
+            //}
+
+            //Console.WriteLine("Main Array");
+            //foreach (int i in secondArr)
+            //{
+            //    Console.Write(i + " ");
+            //}
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("Second array");
+            //foreach (int i in secondArr)
+            //{
+            //    Console.Write(i + " ");
+            //}
+
+            #endregion
+
+            #region Task 2 
+
+            //int[] arr = new int[6] { 2, 43, 2, 3, 43, 6 };
+            //int uniqueCount = 0;
+            //bool isUnique = true;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] == arr[j] && j != i)
+            //        {
+            //            isUnique = false;
+            //            break;
+            //        }
+            //    }
+
+            //    if (isUnique)
+            //        Console.WriteLine("The unique elements found in the array are : " + arr[i]);
+
+            //    uniqueCount = isUnique ? uniqueCount++ : uniqueCount + 0;
+            //    isUnique = true;
+            //}
+
+            //Console.WriteLine("The unique elements count : " + uniqueCount);
+
+            #endregion
+
+            #region Task 4 
+
+            //int[] arr = new int[6] { 2, 43, 9, 3, 48, 6 };
+            //int oddCount = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i] % 2 != 0)
+            //        oddCount++;
+            //}
+
+            //int[] oddArr = new int[oddCount];
+            //int[] evenArr = new int[arr.Length - oddCount];
+            //int oddIndex = 0, evenIndex = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i] % 2 == 0)
+            //    {
+            //        evenArr[evenIndex] = arr[i];
+            //        evenIndex++;
+            //    }
+            //    else
+            //    {
+            //        oddArr[oddIndex] = arr[i];
+            //        oddIndex++;
+            //    }
+            //}
+
+            //Console.WriteLine("Even elemets array");
+            //foreach (int even in evenArr)
+            //{
+            //    Console.Write(even + " ");
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Odd elemets array");
+
+            //foreach (int odd in oddArr)
+            //{
+            //    Console.Write(odd + " ");
+            //}
+
+            #endregion
+
+            #region Task 5 
+
+            int[] arr = new int[6] { 2, 43, 9, 3, 48, 6 };
+            int swap = 0;
+
+            //ascending
+            for (int i = 0; i < arr.Length; i++)
             {
-                nums3[i] = nums1[i];
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] < arr[i])
+                    {
+                        swap = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = swap;
+                    }
+                }
             }
 
-            for (int i = 0; i < nums2.Length; i++)
+            Console.WriteLine("Ascending");
+            foreach (var item in arr)
             {
-                nums3[i + nums1.Length] = nums2[i];
+                Console.Write(item + " ");
             }
 
-            foreach (var item in nums3)
+            //descending
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(item);
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] > arr[i])
+                    {
+                        swap = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = swap;
+                    }
+                }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Descending");
+            foreach (var item in arr)
+            {
+                Console.Write(item + " ");
+            }
+
+            #endregion
+
+            #region Task 6
+            #endregion
+
+            #region Task 7
+            #endregion
+
+            #region Task 8
+            #endregion
+
+            #region Task 9
+            #endregion
+
+            #region Task 10
+            #endregion
+
+            #region Task 11 
+            #endregion
+
+            #region Task 12 
+            #endregion
+
+            #region Task 13 
+            #endregion
+
+            #region Task 14 
+            #endregion
+
+            #region Task 15 
+            #endregion
+
+            #region Task 16 
+            #endregion
 
             #endregion
         }

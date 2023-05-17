@@ -135,6 +135,7 @@ namespace Loop_Instruction
 
             #endregion
 
+            #region 12.05.2023
             #region Task 1 - Insert 10 numbers and find sum of them
 
             //int sum = 0, n;
@@ -282,6 +283,9 @@ namespace Loop_Instruction
 
             #endregion
 
+            #endregion
+
+            #region 15.05.2023
             //Console.WriteLine("Please add one number :");
             //int n = int.Parse(Console.ReadLine());
 
@@ -327,7 +331,9 @@ namespace Loop_Instruction
             //    }
             //    Console.WriteLine();
             //}
+            #endregion
 
+            
         }
     }
 }
