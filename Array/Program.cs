@@ -598,55 +598,52 @@
 
             #endregion
 
-            #region Task 5 
+            #region Task 5 - 6
 
-            int[] arr = new int[6] { 2, 43, 9, 3, 48, 6 };
-            int swap = 0;
+            //int[] arr = new int[6] { 2, 43, 9, 3, 48, 6 };
+            //int swap = 0;
 
-            //ascending
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = i + 1; j < arr.Length; j++)
-                {
-                    if (arr[j] < arr[i])
-                    {
-                        swap = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = swap;
-                    }
-                }
-            }
+            ////ascending
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[j] < arr[i])
+            //        {
+            //            swap = arr[i];
+            //            arr[i] = arr[j];
+            //            arr[j] = swap;
+            //        }
+            //    }
+            //}
 
-            Console.WriteLine("Ascending");
-            foreach (var item in arr)
-            {
-                Console.Write(item + " ");
-            }
+            //Console.WriteLine("Ascending");
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
 
-            //descending
-            for (int i = 0; i < arr.Length; i++)
-            {
-                for (int j = i + 1; j < arr.Length; j++)
-                {
-                    if (arr[j] > arr[i])
-                    {
-                        swap = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = swap;
-                    }
-                }
-            }
+            ////descending
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[j] > arr[i])
+            //        {
+            //            swap = arr[i];
+            //            arr[i] = arr[j];
+            //            arr[j] = swap;
+            //        }
+            //    }
+            //}
 
-            Console.WriteLine();
-            Console.WriteLine("Descending");
-            foreach (var item in arr)
-            {
-                Console.Write(item + " ");
-            }
+            //Console.WriteLine();
+            //Console.WriteLine("Descending");
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
 
-            #endregion
-
-            #region Task 6
             #endregion
 
             #region Task 7
