@@ -678,7 +678,6 @@
 
             #endregion
 
-
             #region String
             //int? a;
 
@@ -859,7 +858,7 @@
             //string metn = "    Azərbaycan Respublikasinin Dovlet Bayragi,test,test2,test3   ";
             //string test = "...";
             //Console.WriteLine(metn.ToLower());
-           // Console.WriteLine(metn.ToUpper());
+            // Console.WriteLine(metn.ToUpper());
 
             //Trim
 
@@ -873,6 +872,279 @@
 
 
             #endregion
+
+            #region 19.05.2023
+
+            #region Task 1
+
+            //byte[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //byte[] arr3 = new byte[arr1.Length];
+            //arr3 = arr1;
+
+            //byte[] arr2 = new byte[arr1.Length];
+            //int iteration = 0;
+
+            //foreach (byte element in arr1)
+            //{
+            //    arr2[iteration] = element;
+            //    iteration++;
+            //}
+
+            //for (int i = 0; i < arr1.Length; i++)
+            //{
+            //    arr2[i] = arr1[i];
+            //}
+
+            //arr2[7] = 255;
+            //arr3[0] = 100;
+
+            //Console.WriteLine("Array 1");
+            //for (int i = 0; i < arr1.Length; i++)
+            //{
+            //    Console.Write(arr1[i] + " ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Array 2");
+            //for (int i = 0; i < arr2.Length; i++)
+            //{
+            //    Console.Write(arr2[i] + " ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Array 3");
+            //for (int i = 0; i < arr3.Length; i++)
+            //{
+            //    Console.Write(arr3[i] + " ");
+            //}
+            #endregion
+
+            #region Task 2
+
+            //int[] arr = new int[] { 12, 32, 12, 34, 56, 89, 98, 34, 34 };
+            //bool isUnique = true;
+            //int[] uniqueArr = new int[arr.Length];
+            //int countIsUnique = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (i != j && arr[i] == arr[j])
+            //        {
+            //            isUnique = false;
+            //            break;
+            //        }
+            //    }
+
+            //    if (isUnique)
+            //    {
+            //        uniqueArr[countIsUnique] = arr[i];
+            //        countIsUnique++;
+            //        //Console.WriteLine("The unique element found in the array are :" + arr[i]);
+            //    }
+            //    isUnique = true;
+            //}
+
+            //Console.WriteLine("The unique element found in the array are : ");
+            //foreach (int i in uniqueArr)
+            //{
+            //    string str = i != 0 ? i + " " : "";
+            //    Console.Write(str);
+            //}
+
+            #endregion
+
+            #region Task 3
+
+            //int[] arr = { 31, 24, 334, 4345345, 512, 61, 73, 8 };
+            //int min = arr[0], max = arr[0];
+
+            //for (int i = 1; i < arr.Length; i++)
+            //{
+            //    //maximum
+            //    if (arr[i] > max)
+            //    {
+            //        max = arr[i];
+            //    }
+
+            //    //minimum
+            //    if (arr[i] < min)
+            //    {
+            //        min = arr[i];
+            //    }
+            //}
+
+            //Console.WriteLine("Maximum number of array is : " + max);
+            //Console.WriteLine("Minimum number of array is : " + min);
+
+            #endregion
+
+            #region Task 4
+            #endregion
+
+            #region Task 5
+            //ascending
+            //int[] arr = new int[] { 99, 20, 45, 46, 78, 13, 24, 3 };
+            //int swap = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] > arr[j])
+            //        {
+            //            swap = arr[i];
+            //            arr[i] = arr[j];
+            //            arr[j] = swap;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine("Sorted array");
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            #endregion
+
+            #region Task 6
+
+            //descending
+            //int[] arr = new int[] { 99, 20, 45, 46, 78, 13, 24, 3 };
+            //int swap = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] < arr[j])
+            //        {
+            //            swap = arr[i];
+            //            arr[i] = arr[j];
+            //            arr[j] = swap;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine("Sorted array");
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            #endregion
+
+            #region Task 9
+            //int column = 3, row = 3;
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5 },
+            //    { 2, 3, 4 },
+            //    { 3, 4, 5 },
+            //};
+
+            //int[,] arr2 = new int[column, row];
+
+            ////column 1
+            //arr2[0, 0] = 1;
+            //arr2[0, 1] = 2;
+            //arr2[0, 2] = 3;
+
+            ////column 2
+            //arr2[1, 0] = 4;
+            //arr2[1, 1] = 5;
+            //arr2[1, 2] = 6;
+
+            ////column 3
+            //arr2[2, 0] = 7;
+            //arr2[2, 1] = 8;
+            //arr2[2, 2] = 9;
+
+            //Console.WriteLine("Array 1");
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        Console.Write(arr[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Array 2");
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        Console.Write(arr2[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+
+            #region Task 12
+
+            //int column = 4, row = 4;
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5, 8 },
+            //    { 2, 3, 4 , 12},
+            //    { 3, 4, 5 , 21},
+            //    { 13, 14, 15 , 0},
+            //};
+
+            //int sum = 0;
+
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        if (i == j)
+            //            sum += arr[i, j]; //sum = sum + arr[i, j]
+            //    }
+            //}
+
+            //Console.WriteLine("Sum of the right diagonal of array is : " + sum);
+
+
+            #endregion
+
+            #region Task 13
+
+            int[,] arr = new int[,]
+            {
+                { 3, 4, 5, 8 },
+                { 2, 3, 4 , 12},
+                { 3, 4, 5 , 21},
+                { 13, 14, 15 , 0},
+            };
+
+            int column = 4, row = 4, length = row;
+
+            // length = 4
+            // 0, 3
+            // 0  = 4 - 3 - 2
+            // row = length - column - 1
+
+            int sum = 0;
+
+            for (int i = 0; i < column; i++)
+            {
+                for (int j = 0; j < row; j++)
+                {
+                    if (j == length - i - 1)
+                        sum += arr[i, j]; //sum = sum + arr[i, j]
+                }
+            }
+
+            Console.WriteLine("Sum of the right diagonal of array is : " + sum);
+
+            #endregion
+
+            #endregion
+
+
+
         }
 
         public static int[] GetMethod(string[] strArr)
