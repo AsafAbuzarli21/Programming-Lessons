@@ -1082,6 +1082,44 @@
             //}
             #endregion
 
+            #region Task 11
+
+            int column = 3, row = 3;
+            int[,] arr = new int[,]
+            {
+                { 3, 4, 5 },
+                { 2, 7, 44 },
+                { 9, 90, 55 },
+            };
+
+            int swap = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if(i != j)
+                    {
+                        swap = arr[i, j];
+                        arr[i, j] = arr[j, i];
+                        arr[j, i] = swap;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Array");
+            for (int i = 0; i < column; i++)
+            {
+                for (int j = 0; j < row; j++)
+                {
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            #endregion
+
             #region Task 12
 
             //int column = 4, row = 4;
@@ -1111,33 +1149,101 @@
 
             #region Task 13
 
-            int[,] arr = new int[,]
-            {
-                { 3, 4, 5, 8 },
-                { 2, 3, 4 , 12},
-                { 3, 4, 5 , 21},
-                { 13, 14, 15 , 0},
-            };
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5, 8 },
+            //    { 2, 3, 4 , 12},
+            //    { 3, 4, 5 , 21},
+            //    { 13, 14, 15 , 0},
+            //};
 
-            int column = 4, row = 4, length = row;
+            //int column = 4, row = 4, length = row;
 
-            // length = 4
-            // 0, 3
-            // 0  = 4 - 3 - 2
-            // row = length - column - 1
+            //// length = 4
+            //// 0, 3
+            //// 0  = 4 - 3 - 2
+            //// row = length - column - 1
 
-            int sum = 0;
+            //int sum = 0;
 
-            for (int i = 0; i < column; i++)
-            {
-                for (int j = 0; j < row; j++)
-                {
-                    if (j == length - i - 1)
-                        sum += arr[i, j]; //sum = sum + arr[i, j]
-                }
-            }
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        if (j == length - i - 1)
+            //            sum += arr[i, j]; //sum = sum + arr[i, j]
+            //    }
+            //}
 
-            Console.WriteLine("Sum of the right diagonal of array is : " + sum);
+            //Console.WriteLine("Sum of the right diagonal of array is : " + sum);
+
+            #endregion
+
+            #region Task 15
+
+            //int column = 3, row = 3;
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5 },
+            //    { 2, 3, 4 },
+            //    { 3, 4, 5 },
+            //};
+
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        if (i < j)
+            //        {
+            //            arr[i, j] = 0;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Array");
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        Console.Write(arr[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            #endregion
+
+            #region Task 16
+            //int column = 3, row = 3;
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5 },
+            //    { 2, 3, 4 },
+            //    { 3, 4, 5 },
+            //};
+
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        if (i > j)
+            //        {
+            //            arr[i, j] = 0;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Array");
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        Console.Write(arr[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
 
             #endregion
 
