@@ -1084,39 +1084,36 @@
 
             #region Task 11
 
-            int column = 3, row = 3;
-            int[,] arr = new int[,]
-            {
-                { 3, 4, 5 },
-                { 2, 7, 44 },
-                { 9, 90, 55 },
-            };
+            //int column = 3, row = 3;
+            //int[,] arr = new int[,]
+            //{
+            //    { 3, 4, 5 },
+            //    { 2, 7, 44 },
+            //    { 9, 90, 55 },
+            //};
 
-            int swap = 0;
+            //int[,] arr2 = new int[column, row];
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    if(i != j)
-                    {
-                        swap = arr[i, j];
-                        arr[i, j] = arr[j, i];
-                        arr[j, i] = swap;
-                    }
-                }
-            }
+            ////int swap = 0;
 
-            Console.WriteLine();
-            Console.WriteLine("Array");
-            for (int i = 0; i < column; i++)
-            {
-                for (int j = 0; j < row; j++)
-                {
-                    Console.Write(arr[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        arr2[j, i] = arr[i, j];
+            //    }
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Array");
+            //for (int i = 0; i < column; i++)
+            //{
+            //    for (int j = 0; j < row; j++)
+            //    {
+            //        Console.Write(arr2[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
 
             #endregion
 
@@ -1248,8 +1245,6 @@
             #endregion
 
             #endregion
-
-
 
         }
 
