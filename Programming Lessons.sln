@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson 4 -  Management Inst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loop Instruction", "Loop Instruction\Loop Instruction.csproj", "{2E0A6BD4-7FEE-4A91-896E-ED1BDB3154DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{74C5ADDC-72F4-481B-919E-92296E522A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{74C5ADDC-72F4-481B-919E-92296E522A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{D12B7936-2966-4496-A1DB-AB311EDEEF52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{74C5ADDC-72F4-481B-919E-92296E522A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C5ADDC-72F4-481B-919E-92296E522A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C5ADDC-72F4-481B-919E-92296E522A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12B7936-2966-4496-A1DB-AB311EDEEF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12B7936-2966-4496-A1DB-AB311EDEEF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12B7936-2966-4496-A1DB-AB311EDEEF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12B7936-2966-4496-A1DB-AB311EDEEF52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
