@@ -293,35 +293,34 @@
 
             #endregion
 
-
             #region Task 19
 
-            string[] fullNames = Console.ReadLine().Split(',');
-            int index = 0;
-            string swap = string.Empty;
+            //string[] fullNames = Console.ReadLine().Split(',');
+            //int index = 0;
+            //string swap = string.Empty;
 
-            for (int i = 0; i < fullNames.Length; i++)
-            {
-                index = fullNames[i].Trim().IndexOf(' ');
-                for (int j = index; j < fullNames[i].Length; j++)
-                {
-                    for (int k = index; k < fullNames[i].Length; k++)
-                    {
-                        if (fullNames[i][k] > fullNames[i][j])
-                        {
-                            swap = fullNames[i];
-                            fullNames[i] = fullNames[j];
-                            fullNames[j] = swap;
-                        }
-                    }
-                }
-            }
+            //for (int i = 0; i < fullNames.Length; i++)
+            //{
+            //    index = fullNames[i].Trim().IndexOf(' ');
+            //    for (int j = index; j < fullNames[i].Length; j++)
+            //    {
+            //        for (int k = index; k < fullNames[i].Length; k++)
+            //        {
+            //            if (fullNames[i][k] > fullNames[i][j])
+            //            {
+            //                swap = fullNames[i];
+            //                fullNames[i] = fullNames[j];
+            //                fullNames[j] = swap;
+            //            }
+            //        }
+            //    }
+            //}
 
 
-            foreach (var item in fullNames)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in fullNames)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
         }
