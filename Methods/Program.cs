@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Microsoft.VisualBasic;
+using System.Data;
 
 namespace Methods
 {
@@ -159,6 +160,53 @@ namespace Methods
             return a + 0.1d;
         }
 
+        public static double CalculateSalaryPercent(out double salary, out double percentage, int age, bool isBorder, bool isResident)
+        {
+            double firstSalary = salary = 300;
+            percentage = 0;
+
+            if (age < 25)
+                salary += 100;
+
+            if (isBorder)
+                salary += 200;
+
+            if (!isResident)
+                salary += 300;
+
+            return ((salary - firstSalary) / firstSalary) * 100;
+        }
+
+        public static void testConsole(int a = 0)
+        {
+            Console.WriteLine("Hello");
+            if (a < 3)
+            {
+                testConsole(++a);
+            }
+            Console.WriteLine("World");
+        }
+
+        public static int SumArrange(int start, int end)
+        {
+            //int sum = 0;
+
+            //for (int i = start; i < end; i++)
+            //{
+            //    if (i % 5 == 0)
+            //        sum += i;
+            //}
+
+            //return sum;
+
+            if (start % 5 == 0)
+                return start + SumArrange(++start, end);
+            if (start < end)
+                return SumArrange(++start, end);
+            else
+                return 0;
+        }
+
         static void Main(string[] args)
         {
 
@@ -276,62 +324,118 @@ namespace Methods
 
             //ref int b = ref a;
 
-            double per = CalculateSalaryPercent(out double salary, out double percentage, 22, true, true);
+            //double per = CalculateSalaryPercent(out double salary, out double percentage, 22, true, true);
 
-            Console.WriteLine("Salary " + salary);
-            Console.WriteLine("Percentage " + per);
+            //Console.WriteLine("Salary " + salary);
+            //Console.WriteLine("Percentage " + per);
 
             #endregion
 
+            #region 26.05.2023
 
+            #region Task 1 - Calculate Factorial
+            //Console.WriteLine("Please insert factorial number:");
+            //int.TryParse(Console.ReadLine(), out int n);
+
+            //int factorial = Factorial(n);
+
+            //Console.WriteLine($"{n} numbers factorial is {factorial}");
+
+            #endregion
+
+            #region Task 2 - Calculate fibonacci with recursiv function
+
+            //Console.WriteLine("Please Enter number");
+
+            //int.TryParse(Console.ReadLine(), out int n);
+
+            //int iteration = 0;
+            ////int fibonacci = Fibonacci(n);
+            //int fibonacci = FibonacciRecursive(n);
+
+            //Console.WriteLine($"{n}th fibonacci number is {fibonacci}");
+
+            //Console.WriteLine(iteration);
+            #endregion
+
+
+            //Console.WriteLine("Please Enter number");
+
+            //int.TryParse(Console.ReadLine(), out int n);
+
+            //Console.WriteLine(Check(n));
+
+
+            string str = Console.ReadLine();
+
+            Array.Reverse(str.ToArray());
+
+
+            Reverse(str);
+
+            #endregion
 
         }
 
-        public static double CalculateSalaryPercent(out double salary, out double percentage, int age, bool isBorder, bool isResident)
+        public static int Factorial(int n)
         {
-            double firstSalary = salary = 300;
-            percentage = 0;
-
-            if (age < 25)
-                salary += 100;
-
-            if (isBorder)
-                salary += 200;
-
-            if (!isResident)
-                salary += 300;
-
-            return ((salary - firstSalary) / firstSalary) * 100;
+            if (n > 0)
+                return n * Factorial(--n);
+            else return 1;
         }
 
-        public static void testConsole(int a = 0)
+        public static int Fibonacci(int n)
         {
-            Console.WriteLine("Hello");
-            if (a < 3)
+            // 0 1 1 2 3 5 8 13 21 34 55
+            int beforeBefore = 1;
+            int before = 1;
+            int swap = 0;
+
+            for (int i = 3; i <= n; i++)
             {
-                testConsole(++a);
+                swap = before;
+                before = before + beforeBefore;
+                beforeBefore = swap;
             }
-            Console.WriteLine("World");
+            return before;
         }
 
-        public static int SumArrange(int start, int end)
+        public static int FibonacciRecursive(int n)
         {
-            //int sum = 0;
 
-            //for (int i = start; i < end; i++)
-            //{
-            //    if (i % 5 == 0)
-            //        sum += i;
-            //}
-
-            //return sum;
-
-            if (start % 5 == 0)
-                return start + SumArrange(++start, end);
-            if (start < end)
-                return SumArrange(++start, end);
+            if (n > 2)
+                return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
             else
-                return 0;
+                return 1;
+        }
+
+        public static bool Check(int n)
+        {
+            if ((n >= 90 && n <= 110) || (n >= 190 && n <= 210))
+                return true;
+            return false;
+        }
+
+        public static void Reverse(string str)
+        {
+            char[] chars = str.ToCharArray();
+
+            //string str3 =  new string(chars);
+
+            char swap;
+            swap = chars[0];
+            chars[0] = chars[str.Length - 1];
+            chars[str.Length - 1] = swap;
+
+            swap = chars[^str.Length];
+            chars[^str.Length] = chars[^1];
+            chars[^1] = swap;
+
+
+            foreach (var item in chars)
+            {
+                Console.Write(item);
+            }
         }
     }
 }
