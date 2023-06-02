@@ -1,4 +1,4 @@
-﻿namespace Array2
+﻿namespace Array
 {
     internal class Program
     {
