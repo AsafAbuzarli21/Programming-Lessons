@@ -226,11 +226,60 @@ namespace Algoritms
             //    Console.WriteLine("Element is not found");
 
 
-            int dividedNumber = int.Parse(Console.ReadLine());
+            //int dividedNumber = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(Divide(dividedNumber));
+            //Console.WriteLine(Divide(dividedNumber));
 
             #endregion
+
+            Console.WriteLine("Please insert number of array element");
+
+            int count = int.Parse(Console.ReadLine());
+
+            int[] arr = new int[count];
+
+            Console.WriteLine("Please insert array elements");
+            for (int i = 0; i < count; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            SlideArrayElements(arr);
+
+            foreach (var item in arr)
+            {
+                Console.Write(item + " ");
+            }
+
+        }
+
+        public static int[] SlideArrayElements(int[] arr)
+        {
+            int next = 0, swap = 0;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+
+                if (i == arr.Length - 1)
+                {
+                    arr[arr.Length - 1] = next ;
+                    arr[0] = swap;
+                }
+                else if (i == 1)
+                {
+                    next = arr[i];
+                    arr[i] = arr[i - 1];
+                }
+                else
+                {
+                    swap = arr[i];
+                    arr[i] = next;
+                    next = swap;
+                    swap = arr[i + 1];
+                }
+            }
+
+            return arr;
         }
 
         public static int Divide(int a)
