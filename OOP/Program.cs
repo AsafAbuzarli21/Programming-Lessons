@@ -1,20 +1,8 @@
 ﻿using OOP2;
-using static OOP.MyClass;
+using System.Net.Cache;
 
 namespace OOP
 {
-
-    public class MyClass
-    {
-        //nested class
-        //public class MyClass2
-        //{
-
-        //}
-
-
-    }
-
     public class Rectangle
     {
         public double Width { get; set; }
@@ -92,10 +80,6 @@ namespace OOP
                 return isAutomatic;
             }
         }
-
-
-
-
 
         public void CarModel()
         {
@@ -216,6 +200,112 @@ namespace OOP
         }
     }
 
+    public class Person
+    {
+        int age;
+        string name;
+
+        //auto property initializer
+        //init - initialize
+        public string Surname { get; init; }
+
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            { age = value; }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set { name = value; }
+        }
+    }
+
+    public record Person2
+    {
+        int a;
+        string name;
+        string surname;
+
+        public string Surname { get; set; }
+        public int Age { get; set; }
+
+    }
+
+    public class MyClass
+    {
+        int test;
+        //default constructor
+        public MyClass()
+        {
+            Console.WriteLine("First constructor trigged");
+        }
+
+        //static constructor
+        static MyClass()
+        {
+            Console.WriteLine("Static constructor");
+        }
+
+        //parametrli construktor
+        public MyClass(int id) : this()
+        {
+            Id = id;
+            //Console.WriteLine("Second constructor trigged");
+        }
+
+        public MyClass(int id, string name) : this(id)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        //tilda - ~
+        //deconstructor
+        //Garbage Collection
+        ~MyClass()
+        {
+            Console.WriteLine("Object deleteddd....");
+        }
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+
+        public void X()
+        {
+            var obj = new MyClass();
+
+        }
+
+        public void Deconstruct(out int id, out string name)
+        {
+            id = Id;
+            name = Name;
+        }
+    }
+
+    //Nominal records
+    public record MyRecord
+    {
+        public int age { get; init; }
+        public string Name { get; init; }
+
+        //public MyRecord With(int age)
+        //{
+        //    //this.age = age;
+        //    return this;
+        //}
+    }
+
     internal class Program
     {
 
@@ -270,30 +360,118 @@ namespace OOP
             //Encapsulation  -=> OOP principle
             //
 
-            Math math = new  Math();
+            //Math math = new  Math();
 
-            Math math2 = math;
+            //Math math2 = math;
 
-            math2.Age = 5;
+            //math2.Age = 5;
 
-            int b = 10;
+            //int b = 10;
 
-            int a = b;
+            //int a = b;
 
-            Math math3 = math.Clone();
-            math3.Age = 10;
+            //Math math3 = math.Clone();
+            //math3.Age = 10;
 
-            Console.WriteLine(math.Age);
+            //Console.WriteLine(math.Age);
+
+
+            #endregion
+
+            #region 09.06.2023
+
+            //init only property
+
+            //Person person = new Person()
+            //{
+            //    Surname = "Adam"
+            //};
+
+            //Person2 person2 = new Person2()
+            //{
+            //    Surname = "test",
+            //    Age = 5
+            //};
+
+            //MyClass clas1 = new MyClass()
+            //{
+            //    MyProperty = 1
+            //};
+
+            //MyClass clas2 = new MyClass()
+            //{
+            //    MyProperty = 1
+            //};
+
+            //Console.WriteLine(clas1.Equals(clas2));
+
+            //MyClass clas3 = clas1;
+
+            //Console.WriteLine(clas3.Equals(clas1));
+
+            //MyRecord rec1 = new MyRecord()
+            //{
+            //    age = 1
+            //};
+
+            //MyRecord rec2 = new MyRecord()
+            //{
+            //    age = 1
+            //};
+
+            ////MyRecord rec4 = rec1.With(20);
+
+            //MyRecord rec3 = rec1 with { age = 3 };
+
+            //Console.WriteLine("Rec 1 " + rec1.age);
+            //Console.WriteLine("Rec 2 " + rec2.age);
+            //Console.WriteLine("Rec 3 " + rec3.age);
+            //Console.WriteLine("Rec 4 " + rec4.age);
+
+            //Console.WriteLine(rec1.Equals(rec2));
+
+
+            //Constructor
+
+            //MyClass class1 = new MyClass();
+
+            //MyClass class2 = new MyClass(15);
+
+            //MyClass class3 = new MyClass(20, "Test");
+
+            //MyClass class4 = new MyClass()
+            //{
+            //    Id = 10,
+            //    Name = "Test"
+            //};
+
+            //Deconstructor
+            //Deconstrut method
+            //static constructor
+
+            //MyClass clas1 = new MyClass(30);
+
+            //clas1 = null;
+
+            //GC.Collect();
+
+            //Console.ReadLine();
+
+
+            //Tuple<int, string, string> person = new Tuple<int, string, string>(1, "Steve", "Jobs");
+
+            ////tuple
+            //(int id, string name) = clas1;
+
+            //Console.WriteLine(id);
+            //Console.WriteLine(name);
+
+            MyClass class1 = new MyClass();
+
+            MyClass class2 = new MyClass();
 
 
             #endregion
         }
-    }
-}
-
-namespace OOP3
-{
-    internal class Test
-    {
     }
 }
