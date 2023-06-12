@@ -1,5 +1,4 @@
-﻿using OOP2;
-using System.Net.Cache;
+﻿using System.Drawing;
 
 namespace OOP
 {
@@ -16,7 +15,7 @@ namespace OOP
         }
     }
 
-    public class Car
+    public class Car2
     {
         //class members
         //indexer
@@ -308,7 +307,6 @@ namespace OOP
 
     internal class Program
     {
-
         static void Main(string[] args)
         {
             #region 05.06.2023
@@ -466,12 +464,221 @@ namespace OOP
             //Console.WriteLine(id);
             //Console.WriteLine(name);
 
-            MyClass class1 = new MyClass();
+            //MyClass class1 = new MyClass();
 
-            MyClass class2 = new MyClass();
+            //MyClass class2 = new MyClass();
 
 
             #endregion
+
+            #region 12.06.2023
+
+            //TestRecord rec = new TestRecord("Test");
+
+            //rec.WriteMessage();
+
+
+            //Inheritance -miras
+            //base class
+            //derived/child class
+
+            //BMW bmw = new BMW("M5");
+            //bmw.Info();
+
+            //bmw.GetHashCode();
+
+            ////byte b = 10;
+            ////int a = b;
+
+            ////byte c = a;
+
+            //Baba baba = new Baba();
+            ////baba.Surname
+
+            //Usaq usaq = new Usaq();
+
+
+            //Hen hen = new Hen();
+            //hen.Fly();
+
+            WorldBank bank = new WorldBank(1);
+            var WMoney = bank.CalculatePercent(100);
+            Console.WriteLine(WMoney);
+
+
+
+            AzerbaijanBank azerbaijanBank = new AzerbaijanBank(1);
+            var AZEMoney = azerbaijanBank.CalculatePercent(100);
+
+            Console.WriteLine(AZEMoney);
+
+
+
+            #endregion
+
         }
     }
+
+    //Object
+    public class BoyukBaba
+    {
+        public string Surname { get; set; }
+    }
+
+    public class Baba : BoyukBaba
+    {
+
+    }
+
+    public class Ata : Baba
+    {
+
+    }
+
+    public class Ana : Ata
+    {
+        public string Surname { get; set; }
+    }
+
+    public class Usaq : Ana
+    {
+        //name hiding
+        public new string Surname { get; set; } = string.Empty;
+    }
+
+    public class Bird
+    {
+        public string Name { get; set; }
+        public string Color { get; set; }
+        public string Voice { get; set; }
+
+        public virtual void Fly()
+        {
+            Console.WriteLine("I am fling......");
+        }
+    }
+
+    public class Hen : Bird
+    {
+        public override void Fly()
+        {
+            Console.WriteLine("I cant fly...");
+        }
+    }
+
+    public class Eagle : Bird
+    {
+
+    }
+
+    public class Parrot : Bird
+    {
+
+    }
+
+    //base
+    public class Car
+    {
+        public Car(string model)
+        {
+            this.Model = model;
+        }
+
+        public string Model { get; set; }
+        public int WheelCount { get; set; }
+        public string Color { get; set; }
+        public int HorsePower { get; set; }
+
+        public void Info()
+        {
+            Console.WriteLine("Model - " + Model);
+        }
+    }
+
+    //derived
+    public class BMW : Car
+    {
+
+        public BMW(string model) : base(model)
+        {
+            Model = model;
+        }
+
+        public string Name { get; set; }
+    }
+
+    //child
+    public class Mercedes : Car
+    {
+        public Mercedes(string model) : base(model)
+        {
+            base.Model = model;
+            this.Model = model;
+        }
+    }
+
+    public class Audi : Car
+    {
+        public Audi(string model) : base(model)
+        {
+        }
+    }
+
+    public record TestRecord
+    {
+        public string Message { get; init; }
+
+        public TestRecord(string message)
+        {
+            this.Message = message;
+        }
+
+        public void WriteMessage()
+        {
+            Console.WriteLine(Message);
+        }
+    }
+
+
+    public class WorldBank
+    {
+        //protected
+        protected int percent;
+
+        public WorldBank(int percent)
+        {
+            this.percent = percent;
+        }
+
+        public string Name { get; set; }
+
+        public virtual int CalculatePercent(int money)
+        {
+            return money + (money * percent) / 100;
+        }
+    }
+
+    public class AzerbaijanBank : WorldBank
+    {
+        public AzerbaijanBank(int percent) : base(percent)
+        {
+
+        }
+
+        public override int CalculatePercent(int money)
+        {
+            percent = percent + 4;
+
+            return money + (money * percent) / 100;
+        }
+    }
+
+    public class TurkishBank : WorldBank
+    {
+        public TurkishBank(int percent) : base(percent)
+        {
+
+        }
+    }
+
 }
