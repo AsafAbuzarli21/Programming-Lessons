@@ -553,9 +553,9 @@ namespace OOP
             A a3 = c as A;
 
             //run time error
-            
+            //C c3 = b as C;
 
-            if(b is C)
+            if (b is C)
             {
                 C c3 = b as C;
             }
