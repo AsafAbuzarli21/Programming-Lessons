@@ -197,6 +197,22 @@ namespace OOP
         {
             return (Math)MemberwiseClone();
         }
+
+        //Method overloading
+        public int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        public int Sum(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+        public int Sum(int a, int b, int c, int d)
+        {
+            return a + b + c + d;
+        }
     }
 
     public class Person
@@ -501,28 +517,76 @@ namespace OOP
             //Hen hen = new Hen();
             //hen.Fly();
 
-            WorldBank bank = new WorldBank(1);
-            var WMoney = bank.CalculatePercent(100);
-            Console.WriteLine(WMoney);
+            //WorldBank bank = new WorldBank(1);
+            //var WMoney = bank.CalculatePercent(100);
+            //Console.WriteLine(WMoney);
 
+            //AzerbaijanBank azerbaijanBank = new AzerbaijanBank(1);
+            //var AZEMoney = azerbaijanBank.CalculatePercent(100);
 
-
-            AzerbaijanBank azerbaijanBank = new AzerbaijanBank(1);
-            var AZEMoney = azerbaijanBank.CalculatePercent(100);
-
-            Console.WriteLine(AZEMoney);
-
+            //Console.WriteLine(AZEMoney);
 
 
             #endregion
 
+            #region 14.06.2023
+
+            //Polymorphism = poly - coxlu, morphism - forma
+
+            //B b = new B();
+
+            //A a = new B();
+
+            C c = new C();
+
+            //explicit casting
+            B b2 = (B)c;
+            B b = new B();
+
+
+            //compile time error
+            //C c2 = b;
+
+            //implicit casting
+            A a2 = c;
+
+            A a3 = c as A;
+
+            //run time error
+            
+
+            if(b is C)
+            {
+                C c3 = b as C;
+            }
+            else if(c is B)
+            {
+                B b4 = c as B;
+            }
+
+            //Static Polymorphism
+
+            //Math math = new Math();
+
+            //math.Sum(10, 8);
+
+            //Dynamic Polymorphism
+
+            //A a = new A();
+            //a.X()
+
+
+            // ___B__  is a ___A_  // Association
+            // Qualification  has a Salary
+
+            #endregion
         }
     }
 
     //Object
     public class BoyukBaba
     {
-        public string Surname { get; set; }
+        public string surname { get; set; }
     }
 
     public class Baba : BoyukBaba
@@ -639,7 +703,6 @@ namespace OOP
         }
     }
 
-
     public class WorldBank
     {
         //protected
@@ -681,4 +744,73 @@ namespace OOP
         }
     }
 
+    /// <summary>
+    /// This is A class
+    /// </summary>
+    public class A
+    {
+        /// <summary>
+        /// this is X method
+        /// </summary>
+        /// <param name="message"></param>
+        public virtual void X(string message)
+        {
+
+        }
+
+        /// <summary>
+        /// this is X method
+        /// </summary>
+        public virtual void X()
+        {
+            Console.WriteLine("This is base class");
+        }
+    }
+
+    public class B : A
+    {
+        public override void X()
+        {
+            Console.WriteLine("This is B class");
+        }
+    }
+
+    public class C : B
+    {
+        public override void X()
+        {
+            Console.WriteLine("This is C class");
+        }
+    }
+
+    public class D
+    {
+
+    }
+
+    public class Qualification
+    {
+        Salary _salary;
+
+        public string? Name { get; set; }
+        public Salary? Salary { get; set; }
+    }
+
+    public class Salary : ISalary
+    {
+        int ISalary.Value { get; set; }
+        string? ISalary.Currency { get; set; }
+
+        void ISalary.CalculateSalary()
+        {
+
+        }
+    }
+
+    public interface ISalary
+    {
+        int Value { get; set; }
+        string? Currency { get; set; }
+        void CalculateSalary();
+    }
 }
