@@ -295,6 +295,7 @@ namespace Generics_Collections
 
             //Stack
             //HashTable
+            //Dictionary<T,K>
         }
 
 
