@@ -34,91 +34,6 @@ namespace Generics_Collections
         }
     }
 
-    public class MyList<T> : ICollection<T>
-    {
-        public object? this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public bool IsFixedSize => throw new NotImplementedException();
-
-        public bool IsReadOnly => throw new NotImplementedException();
-
-        public int Count => throw new NotImplementedException();
-
-        public bool IsSynchronized => throw new NotImplementedException();
-
-        public object SyncRoot => throw new NotImplementedException();
-
-        public int Add(object? value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Contains(object? value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Contains(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(Array array, int index)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(T[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int IndexOf(object? value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(int index, object? value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(object? value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveAt(int index)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     public class Program
     {
         public enum DayOfWeek2 : byte
@@ -171,26 +86,26 @@ namespace Generics_Collections
             //Collections
             //ArrayList
 
-            int[] arr = new int[10];
-            arr[0] = 1;
-            arr[1] = 5;
-            arr[2] = 6;
+            //int[] arr = new int[10];
+            //arr[0] = 1;
+            //arr[1] = 5;
+            //arr[2] = 6;
 
             //arr[3] = "dsfjsd";
 
             //strong typed
-            ArrayList arrList = new ArrayList();
+            //ArrayList arrList = new ArrayList();
 
 
             //Console.WriteLine(arrList.IsFixedSize);
 
-            arrList.AddRange(arr);
+            //arrList.AddRange(arr);
 
-            var b = arrList.Add(10);
+            //var b = arrList.Add(10);
 
-            arrList.Add("test");
-            arrList.Add(true);
-            arrList.Add(3.4);
+            //arrList.Add("test");
+            //arrList.Add(true);
+            //arrList.Add(3.4);
 
             //int index = arrList.IndexOf(10);
 
@@ -198,10 +113,10 @@ namespace Generics_Collections
 
             //Console.WriteLine(age);
 
-            CollectData<string> data = new CollectData<string>();
+            //CollectData<string> data = new CollectData<string>();
 
-            //add element to the end of the array list
-            arrList.Add(data);
+            ////add element to the end of the array list
+            //arrList.Add(data);
 
 
 
@@ -232,62 +147,62 @@ namespace Generics_Collections
             //Console.WriteLine(DayOfWeek.Sunday.ToString());
 
             //List
-            List<string> list = new List<string>();
+            //List<string> list = new List<string>();
 
-            List<Person> people = new List<Person>();
+            //List<Person> people = new List<Person>();
 
             ///type1
-            Person asaf = new Person();
-            asaf.Name = "Asaf";
-            asaf.Age = 24;
+            //Person asaf = new Person();
+            //asaf.Name = "Asaf";
+            //asaf.Age = 24;
 
-            Person kanan = new Person();
-            kanan.Name = "Kanan";
-            kanan.Age = 24;
+            //Person kanan = new Person();
+            //kanan.Name = "Kanan";
+            //kanan.Age = 24;
 
-            Person ayxan = new Person()
-            {
-                Name = "Ayxan",
-                Age = 17
-            };
+            //Person ayxan = new Person()
+            //{
+            //    Name = "Ayxan",
+            //    Age = 17
+            //};
 
-            people.Add(ayxan);
-            people.Add(kanan);
-            people.Add(asaf);
+            //people.Add(ayxan);
+            //people.Add(kanan);
+            //people.Add(asaf);
 
-            ///type2
-            people.Add(new Person()
-            {
-                Name = "Sahib",
-                Age = 24
-            });
+            /////type2
+            //people.Add(new Person()
+            //{
+            //    Name = "Sahib",
+            //    Age = 24
+            //});
 
-            ///type3
-            List<Person> persons = new List<Person>()
-            {
-                 new Person()
-                 {
-                     Name = "Faiq",
-                     Age = 17
-                 },
-                 new Person()
-                 {
-                     Name = "Seymur",
-                     Age = 22
-                 },
-                 new Person()
-                 {
-                     Name ="Settar",
-                     Age = 22
-                 }
-            };
+            /////type3
+            //List<Person> persons = new List<Person>()
+            //{
+            //     new Person()
+            //     {
+            //         Name = "Faiq",
+            //         Age = 17
+            //     },
+            //     new Person()
+            //     {
+            //         Name = "Seymur",
+            //         Age = 22
+            //     },
+            //     new Person()
+            //     {
+            //         Name ="Settar",
+            //         Age = 22
+            //     }
+            //};
 
-            list.ForEach(person => { });
+            //list.ForEach(person => { });
 
-            var test = persons.Cast<object>();
+            //var test = persons.Cast<object>();
 
-            var per = persons.Find(x => x.Age > 17);
-            var pers = persons.FindAll(x => x.Age > 17);
+            //var per = persons.Find(x => x.Age > 17);
+            //var pers = persons.FindAll(x => x.Age > 17);
 
 
             //Queue
@@ -296,6 +211,25 @@ namespace Generics_Collections
             //Stack
             //HashTable
             //Dictionary<T,K>
+
+
+            CustomList<int> customList = new CustomList<int>();
+
+            customList.Add(1);
+            customList.Add(2);
+            customList.Add(3);
+            customList.Add(4);
+            customList.Add(5);
+
+            customList.InsertAt(6, 2);
+
+            for (int i = 0; i < customList.Count; i++)
+            {
+                Console.WriteLine(customList[i]);
+            }
+
+
+
         }
 
 
