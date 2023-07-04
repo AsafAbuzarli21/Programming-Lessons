@@ -1,7 +1,9 @@
 ﻿namespace Generics_Collections
 {
-    public class Company
+    public class Company2
     {
+        //public List<Employee> Employees { get; set; }
+
         public List<string> Employees { get; set; } = new List<string>();
         public List<double> Salaries { get; set; } = new List<double>();
 

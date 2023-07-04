@@ -45,7 +45,7 @@
         }
     }
 
-    public class CustomList<T>
+    public class CustomList2<T>
     {
         T[] _array = new T[0];
 
@@ -76,7 +76,7 @@
             }
         }
 
-        public CustomList(int capacity = 4)
+        public CustomList2(int capacity = 4)
         {
             this._capacity = capacity;
             this._array = new T[capacity];
