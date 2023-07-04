@@ -1,62 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Generics_Collections
+﻿namespace Generics_Collections
 {
     public class Company
     {
-        public List<string> Emplees { get; set; } = new List<string>();
+        public List<string> Employees { get; set; } = new List<string>();
         public List<double> Salaries { get; set; } = new List<double>();
 
-        public void AddEmploee(string emploee, double salary)
+        public void AddEmployee(string employee, double salary)
         {
-            Emplees.Add(emploee);
+            Employees.Add(employee);
             Salaries.Add(salary);
         }
 
-        public void ShowAllEmploeeSalaries()
+        public void ShowAllEmployeeSalaries()
         {
-            for (int i = 0; i < Emplees.Count; i++)
+            for (int i = 0; i < Employees.Count; i++)
             {
-                Console.WriteLine(Emplees[i] + " " + Salaries[i]);
+                Console.WriteLine(Employees[i] + " " + Salaries[i]);
             }
         }
 
-        public double GetSalary(string emploee)
+        public double GetSalary(string employee)
         {
-            int index = Emplees.IndexOf(emploee);
+            int index = Employees.IndexOf(employee);
             return Salaries[index];
         }
 
-        public void UpdateSalary(string emploee, double salary)
+        public void UpdateSalary(string employee, double salary)
         {
-            int emploeeIndex = Emplees.IndexOf(emploee);
+            int emploeeIndex = Employees.IndexOf(employee);
             Salaries[emploeeIndex] = salary;
         }
 
-        public string GetEmploeeWithSalary()
+        public string GetEmployeeWithSalary()
         {
             double salary = Salaries.Max();
 
             int salaryIndex = Salaries.IndexOf(salary);
 
-            return Emplees[salaryIndex];
+            return Employees[salaryIndex];
         }
 
-        public void RemoveEmploee(string emploee)
+        public void RemoveEmployee(string employee)
         {
-            int emploeeIndex = Emplees.IndexOf(emploee);
+            int emploeeIndex = Employees.IndexOf(employee);
 
-            Emplees.RemoveAt(emploeeIndex);
+            Employees.RemoveAt(emploeeIndex);
 
             Salaries.RemoveAt(emploeeIndex);
         }
     }
 
-    public class Emplee
+    public class Employee
     {
         public string Name { get; set; } = string.Empty;
         public double Salary { get; set; }
