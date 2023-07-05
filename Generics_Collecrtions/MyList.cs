@@ -96,15 +96,34 @@
 
         private void DecreaseSize()
         {
-            T[] newArray = new T[_capacity * 2];
-
-            for (int i = 0; i < _capacity; i++)
+            if (_count == _capacity)
             {
-                newArray[i] = _array[i];
-            }
+                T[] newArray = new T[_capacity * 2];
 
-            _array = newArray;
-            _capacity *= 2;
+                for (int i = 0; i < _capacity; i++)
+                {
+                    newArray[i] = _array[i];
+                }
+
+                _array = newArray;
+                _capacity *= 2;
+            }
+        }
+
+        private void IncreaseSize()
+        {
+            if (_count == _capacity / 4)
+            {
+                T[] newArray = new T[_capacity / 4];
+
+                for (int i = 0; i < _capacity; i++)
+                {
+                    newArray[i] = _array[i];
+                }
+
+                _array = newArray;
+                _capacity /= 4;
+            }
         }
 
         public void Add(T item)
@@ -140,7 +159,15 @@
 
         public void RemoveAt(int index)
         {
+            for (int i = index; i < _count - 1; i++)
+            {
+                _array[i] = _array[i + 1];
+            }
 
+            _array[_count - 1] = default(T);
+            _count--;
+
+            IncreaseSize();
         }
     }
 }
