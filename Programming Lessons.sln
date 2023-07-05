@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics_Collections", "Gen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{4B5DC3BA-BA04-47B1-AEAF-4716BADE6CCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{BCCA3C19-D4A0-4011-90A0-E12E7CE37992}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{4B5DC3BA-BA04-47B1-AEAF-4716BADE6CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B5DC3BA-BA04-47B1-AEAF-4716BADE6CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B5DC3BA-BA04-47B1-AEAF-4716BADE6CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCA3C19-D4A0-4011-90A0-E12E7CE37992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCA3C19-D4A0-4011-90A0-E12E7CE37992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCA3C19-D4A0-4011-90A0-E12E7CE37992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCA3C19-D4A0-4011-90A0-E12E7CE37992}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

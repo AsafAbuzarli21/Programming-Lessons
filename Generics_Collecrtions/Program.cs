@@ -1,4 +1,6 @@
-﻿using static Generics_Collections.Program;
+﻿using System.Collections;
+using System.Linq;
+using static Generics_Collections.Program;
 
 namespace Generics_Collections
 {
@@ -367,7 +369,24 @@ namespace Generics_Collections
             //    Console.WriteLine(i);
 
             //HashTable
-            //Dictionary<T,K>
+
+            //Hashtable hashTable = new Hashtable();
+
+            //hashTable.Add("Real Mardid", 1902);
+            //hashTable.Add("Barcelona", 1880);
+
+            //var value = hashTable["Real Madrid"];
+
+            //Dictionary<int, string> keyValuePairs = new Dictionary<int, string>();
+            //keyValuePairs.Add(21, "Gedebey");
+            //keyValuePairs.Add(10, "Baki");
+            //keyValuePairs.Add(77, "Baki");
+            //keyValuePairs.Add(90, "Baki");
+            //keyValuePairs.Add(50, "Sumqayit");
+
+            //keyValuePairs.Remove(10);
+
+            //var test = keyValuePairs.Chunk(3);
         }
 
 

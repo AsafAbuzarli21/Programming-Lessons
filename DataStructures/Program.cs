@@ -1,19 +1,21 @@
-﻿namespace DataStructures
+﻿using static DataStructures.DataStructure;
+
+namespace DataStructures
 {
     internal class Program
     {
-        public class Node
+        public class Node2
         {
             public int Data;
-            public Node Next;
+            public Node2 Next;
 
         }
 
-        public class LinkedList
+        public class LinkedList2
         {
-            public Node Head;
+            public Node2 Head;
 
-            public LinkedList()
+            public LinkedList2()
             {
                 Head = null;
             }
@@ -26,7 +28,7 @@
                     return;
                 }
 
-                Node temp = Head;
+                Node2 temp = Head;
 
                 while (temp != null)
                 {
@@ -37,7 +39,7 @@
 
             public void AddLast(int data)
             {
-                Node newNode = new Node()
+                Node2 newNode = new Node2()
                 {
                     Data = data,
                     Next = null
@@ -49,7 +51,7 @@
                     return;
                 }
 
-                Node temp = Head;
+                Node2 temp = Head;
 
                 while (temp.Next != null)
                     temp = temp.Next;
@@ -61,7 +63,7 @@
 
             public void AddFirst(int data)
             {
-                Node newNode = new Node()
+                Node2 newNode = new Node2()
                 {
                     Data = data,
                     Next = null
@@ -79,7 +81,7 @@
 
             public void AddCustomPosition(int position, int data)
             {
-                Node newNode = new Node()
+                Node2 newNode = new Node2()
                 {
                     Data = data,
                     Next = null
@@ -92,7 +94,7 @@
                     return;
                 }
 
-                Node temp = Head;
+                Node2 temp = Head;
 
                 for (int i = 1; i < position - 1; i++)
                 {
@@ -131,7 +133,7 @@
                     return;
                 }
 
-                Node temp = Head;
+                Node2 temp = Head;
 
                 while (temp.Next.Next != null)
                     temp = temp.Next;
@@ -154,7 +156,7 @@
                     Head = null;
                 }
 
-                Node temp = Head;
+                Node2 temp = Head;
 
                 for (int i = 1; i < position; i++)
                 {
@@ -170,36 +172,20 @@
         {
             LinkedList linkedList = new LinkedList();
 
-            Node node1 = new Node();
-            node1.Data = 1;
-            node1.Next = null;
+            linkedList.AddLast(1);
+            linkedList.AddLast(2);
+            linkedList.AddLast(3);
 
-            linkedList.Head = node1;
+            linkedList.AddFirst(777);
+            linkedList.AddFirst(99);
 
-            Node node2 = new Node();
-            node2.Data = 2;
-            node2.Next = null;
+            linkedList.AddPosition(3, 111);
 
-            node1.Next = node2;
+            linkedList.AddPosition(10, 888);
 
-            Node node3 = new Node();
-            node3.Data = 3;
-            node3.Next = null;
+            linkedList.AddPosition(11000, 1111111);
 
-            node2.Next = node3;
-
-            linkedList.AddFirst(21);
-
-            linkedList.AddLast(22);
-
-            linkedList.AddCustomPosition(3, 456);
-
-            //linkedList.RemoveLast();
-
-            //linkedList.RemoveFirst();
-
-            linkedList.Show();
-
+            linkedList.ShowElements();
         }
     }
 }
