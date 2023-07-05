@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using static Generics_Collections.Program;
+﻿using static Generics_Collections.Program;
 
 namespace Generics_Collections
 {
