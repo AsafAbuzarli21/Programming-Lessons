@@ -141,6 +141,19 @@
 
             public void RemoveCustomPosition(int position)
             {
+                //empty list
+                if (Head == null)
+                {
+                    Console.WriteLine("List is empty");
+                    return;
+                }
+
+                //one element list
+                if (position == 1 && Head.Next == null)
+                {
+                    Head = null;
+                }
+
                 Node temp = Head;
 
                 for (int i = 1; i < position; i++)
@@ -148,10 +161,8 @@
                     if (temp != null)
                         temp = temp.Next;
                 }
-                if ((position < 0) || Head == null)
-                {
-                    Console.WriteLine();
-                }
+
+                temp.Next = temp.Next.Next;
             }
         }
 
