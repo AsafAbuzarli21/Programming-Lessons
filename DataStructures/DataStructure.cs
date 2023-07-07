@@ -14,6 +14,25 @@ namespace DataStructures
             public Node3 Next = null;
         }
 
+        public class Node
+        {
+            public int Data;
+            public Node Next;
+            public Node Previous;
+
+            public Node()
+            {
+
+            }
+
+            public Node(int data)
+            {
+                Data = data;
+                Next = null;
+                Previous = null;
+            }
+        }
+
         public class LinkedList
         {
             public Node3 Head;
@@ -109,8 +128,90 @@ namespace DataStructures
 
             }
 
-            
+
 
         }
+
+        public class CircleLinkedList
+        {
+            public Node Head;
+            public Node Tail;
+            private int _size;
+
+            public CircleLinkedList()
+            {
+                Head = null;
+                Tail = null;
+                _size = 0;
+            }
+
+            public int GetSize()
+            {
+                return _size;
+            }
+
+            public bool IsEmpty()
+            {
+                return _size == 0;
+            }
+
+            public void Show()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("List is empty!");
+                    return;
+                }
+
+                Node temp = Head;
+
+                for (int i = 1; i <= _size; i++)
+                {
+                    Console.WriteLine(temp.Data);
+                    temp = temp.Next;
+                }
+            }
+
+            public void AddLast(int data)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    Head = newNode;
+                    Tail = newNode;
+                    Head.Next = newNode;
+                    _size++;
+                    return;
+                }
+
+                Tail.Next = newNode;
+                newNode.Next = Head;
+                Tail = newNode;
+                _size++;
+            }
+
+            public void AddFirst(int data)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    Head = newNode;
+                    Tail = newNode;
+                    Head.Next = newNode;
+                    _size++;
+                    return;
+                }
+
+                newNode.Next = Head;
+                Head = newNode;
+                Tail.Next = newNode;
+                _size++;
+            }
+
+            // AddPosition
+        }
+
     }
 }

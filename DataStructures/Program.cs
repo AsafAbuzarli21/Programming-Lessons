@@ -1,4 +1,6 @@
-﻿namespace DataStructures
+﻿using static DataStructures.DataStructure;
+
+namespace DataStructures
 {
     internal class Program
     {
@@ -353,14 +355,14 @@
             }
         }
 
-        public class CircularLinkedList
+        public class CircularLinkedList2
         {
             public Node Head;
             public Node Tail;
 
             int _size = 0;
 
-            public CircularLinkedList()
+            public CircularLinkedList2()
             {
                 Head = null;
                 Tail = null;
@@ -470,12 +472,12 @@
 
         }
 
-        public class DoubleLinkedList
+        public class DoubleLinkedList2
         {
             public Node Head;
             int _size = 0;
 
-            public DoubleLinkedList()
+            public DoubleLinkedList2()
             {
                 Head = null;
             }
@@ -553,6 +555,7 @@
 
         static void Main(string[] args)
         {
+            #region 06.07.2023
             //LinkedList linkedList = new LinkedList();
 
             //linkedList.AddLast(1);
@@ -570,27 +573,42 @@
 
             //linkedList.ShowElements();
 
-            Queue queue = new Queue();
+            //Queue queue = new Queue();
 
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
-            queue.Enqueue(4);
-            queue.Enqueue(5);
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
 
-            queue.Show();
+            //queue.Show();
 
-            Console.WriteLine("==============");
+            //Console.WriteLine("==============");
 
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
+            //Console.WriteLine(queue.Dequeue());
+            //Console.WriteLine(queue.Dequeue());
+            //Console.WriteLine(queue.Dequeue());
 
-            Console.WriteLine("=================");
+            //Console.WriteLine("=================");
 
-            queue.Show();
+            //queue.Show();
 
-            Console.WriteLine(queue.Peek());
+            //Console.WriteLine(queue.Peek());
+
+            #endregion
+
+
+            CircleLinkedList circleLinkedList = new CircleLinkedList();
+            circleLinkedList.AddLast(1);
+            circleLinkedList.AddLast(2);
+            circleLinkedList.AddLast(3);
+            circleLinkedList.AddLast(4);
+            circleLinkedList.AddLast(5);
+
+            circleLinkedList.AddFirst(6);
+            circleLinkedList.AddFirst(77);
+            circleLinkedList.Show();
+
         }
     }
 }
