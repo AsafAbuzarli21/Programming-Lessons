@@ -8,15 +8,15 @@ namespace DataStructures
 {
     public class DataStructure
     {
-        public class Node
+        public class Node3
         {
             public int Data;
-            public Node Next = null;
+            public Node3 Next = null;
         }
 
         public class LinkedList
         {
-            public Node Head;
+            public Node3 Head;
 
             public LinkedList()
             {
@@ -25,7 +25,7 @@ namespace DataStructures
 
             public void ShowElements()
             {
-                Node temp = Head;
+                Node3 temp = Head;
 
                 while (temp != null)
                 {
@@ -36,7 +36,7 @@ namespace DataStructures
 
             public void AddLast(int data)
             {
-                Node newNode = new Node()
+                Node3 newNode = new Node3()
                 {
                     Data = data,
                     Next = null,
@@ -48,7 +48,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node temp = Head;
+                Node3 temp = Head;
 
                 while (temp.Next != null)
                 {
@@ -60,7 +60,7 @@ namespace DataStructures
 
             public void AddFirst(int data)
             {
-                Node newNode = new Node()
+                Node3 newNode = new Node3()
                 {
                     Data = data,
                     Next = null
@@ -72,7 +72,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node temp = Head;
+                Node3 temp = Head;
 
                 newNode.Next = temp;
                 Head = newNode;
@@ -80,7 +80,7 @@ namespace DataStructures
 
             public void AddPosition(int position, int data)
             {
-                Node newNode = new Node()
+                Node3 newNode = new Node3()
                 {
                     Data = data,
                     Next = null
@@ -92,7 +92,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node temp = Head;
+                Node3 temp = Head;
 
                 //Asaf, Kanan, Sahib, Faiq, Ayxan, Next=null
 
@@ -108,6 +108,8 @@ namespace DataStructures
                 temp.Next = newNode;
 
             }
+
+            
 
         }
     }

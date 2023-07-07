@@ -4,16 +4,26 @@ namespace DataStructures
 {
     internal class Program
     {
-        public class Node2
+        public class Node
         {
             public int Data;
-            public Node2 Next;
+            public Node Next;
 
+            public Node()
+            {
+
+            }
+
+            public Node(int data)
+            {
+                Data = data;
+                Next = null;
+            }
         }
 
         public class LinkedList2
         {
-            public Node2 Head;
+            public Node Head;
 
             public LinkedList2()
             {
@@ -28,7 +38,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node2 temp = Head;
+                Node temp = Head;
 
                 while (temp != null)
                 {
@@ -39,7 +49,7 @@ namespace DataStructures
 
             public void AddLast(int data)
             {
-                Node2 newNode = new Node2()
+                Node newNode = new Node()
                 {
                     Data = data,
                     Next = null
@@ -51,7 +61,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node2 temp = Head;
+                Node temp = Head;
 
                 while (temp.Next != null)
                     temp = temp.Next;
@@ -63,7 +73,7 @@ namespace DataStructures
 
             public void AddFirst(int data)
             {
-                Node2 newNode = new Node2()
+                Node newNode = new Node()
                 {
                     Data = data,
                     Next = null
@@ -81,7 +91,7 @@ namespace DataStructures
 
             public void AddCustomPosition(int position, int data)
             {
-                Node2 newNode = new Node2()
+                Node newNode = new Node()
                 {
                     Data = data,
                     Next = null
@@ -94,7 +104,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node2 temp = Head;
+                Node temp = Head;
 
                 for (int i = 1; i < position - 1; i++)
                 {
@@ -133,7 +143,7 @@ namespace DataStructures
                     return;
                 }
 
-                Node2 temp = Head;
+                Node temp = Head;
 
                 while (temp.Next.Next != null)
                     temp = temp.Next;
@@ -156,7 +166,7 @@ namespace DataStructures
                     Head = null;
                 }
 
-                Node2 temp = Head;
+                Node temp = Head;
 
                 for (int i = 1; i < position; i++)
                 {
@@ -166,26 +176,235 @@ namespace DataStructures
 
                 temp.Next = temp.Next.Next;
             }
+
+            public void RemoveEvenNumbers()
+            {
+                if (Head == null)
+                {
+                    Console.WriteLine("List is empty");
+                    return;
+                }
+
+                Node temp = Head;
+
+                while (temp.Next != null)
+                {
+                    if (temp.Next.Data % 2 == 0)
+                    {
+                        temp.Next = temp.Next.Next;
+                        continue;
+                    }
+
+                    temp = temp.Next;
+                }
+
+                if (Head.Data % 2 == 0)
+                    Head = Head.Next;
+
+            }
         }
+
+        public class Queue
+        {
+            public Node Head;
+            public Node Tail;
+
+            public Queue()
+            {
+                Head = null;
+                Tail = null;
+            }
+
+            public void Show()
+            {
+                if (Head == null)
+                {
+                    Console.WriteLine("List is empty");
+                    return;
+                }
+
+                Node temp = Head;
+
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.Data);
+                    temp = temp.Next;
+                }
+            }
+
+            public void Enqueue(int data)
+            {
+                var newNode = new Node(data);
+
+                if (Head == null)
+                {
+                    Head = newNode;
+                    Tail = newNode;
+                    return;
+                }
+
+                Tail.Next = newNode;
+                Tail = newNode;
+
+            }
+
+            public int Dequeue()
+            {
+                int peek;
+
+                if (Head == null)
+                {
+                    return -1;
+                }
+
+                peek = Head.Data;
+                Head = Head.Next;
+
+                return peek;
+            }
+
+            public int Peek()
+            {
+                int peek;
+
+                if (Head == null)
+                {
+                    return -1;
+                }
+
+                peek = Head.Data;
+
+                return peek;
+            }
+
+
+            public bool IsEmpty()
+            {
+                if (Head == null)
+                    return true;
+
+                return false;
+            }
+        }
+
+
+        public class Stack
+        {
+            public Node Top;
+
+            public Stack()
+            {
+                Top = null;
+            }
+
+            public void Show()
+            {
+                if (Top == null)
+                {
+                    Console.WriteLine("List is empty");
+                    return;
+                }
+
+                Node temp = Top;
+
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.Data);
+                    temp = temp.Next;
+                }
+            }
+
+            public void Push(int data)
+            {
+                var newNode = new Node(data);
+
+                if (Top == null)
+                {
+                    Top = newNode;
+                    return;
+                }
+
+                newNode.Next = Top;
+                Top = newNode;
+            }
+
+            public int Pop()
+            {
+                int peek;
+
+                if (Top == null)
+                {
+                    return -1;
+                }
+
+                peek = Top.Data;
+                Top = Top.Next;
+
+                return peek;
+            }
+
+            public int Peek()
+            {
+                int peek;
+
+                if (Top == null)
+                {
+                    return -1;
+                }
+
+                peek = Top.Data;
+
+                return peek;
+            }
+
+
+            public bool IsEmpty()
+            {
+                return Top == null;
+            }
+        }
+
 
         static void Main(string[] args)
         {
-            LinkedList linkedList = new LinkedList();
+            //LinkedList linkedList = new LinkedList();
 
-            linkedList.AddLast(1);
-            linkedList.AddLast(2);
-            linkedList.AddLast(3);
+            //linkedList.AddLast(1);
+            //linkedList.AddLast(2);
+            //linkedList.AddLast(3);
 
-            linkedList.AddFirst(777);
-            linkedList.AddFirst(99);
+            //linkedList.AddFirst(777);
+            //linkedList.AddFirst(992);
 
-            linkedList.AddPosition(3, 111);
+            //linkedList.AddPosition(3, 111);
 
-            linkedList.AddPosition(10, 888);
+            //linkedList.AddPosition(10, 888);
 
-            linkedList.AddPosition(11000, 1111111);
+            //linkedList.AddPosition(11000, 11111112);
 
-            linkedList.ShowElements();
+            //linkedList.ShowElements();
+
+            Queue queue = new Queue();
+
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+
+            queue.Show();
+
+            Console.WriteLine("==============");
+
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());
+            Console.WriteLine(queue.Dequeue());
+
+            Console.WriteLine("=================");
+
+            queue.Show();
+
+            Console.WriteLine(queue.Peek());
         }
     }
 }
