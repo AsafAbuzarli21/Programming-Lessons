@@ -354,6 +354,10 @@ namespace DataStructures
                 _size--;
             }
 
+            //TODO RemoveFirst
+
+            //TODO RemovePosition
+
         }
     }
 }
