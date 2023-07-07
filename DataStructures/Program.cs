@@ -1,6 +1,4 @@
-﻿using static DataStructures.DataStructure;
-
-namespace DataStructures
+﻿namespace DataStructures
 {
     internal class Program
     {
@@ -265,18 +263,13 @@ namespace DataStructures
 
             public int Peek()
             {
-                int peek;
-
                 if (Head == null)
                 {
                     return -1;
                 }
 
-                peek = Head.Data;
-
-                return peek;
+                return Head.Data;
             }
-
 
             public bool IsEmpty()
             {
@@ -286,7 +279,6 @@ namespace DataStructures
                 return false;
             }
         }
-
 
         public class Stack
         {
@@ -345,18 +337,13 @@ namespace DataStructures
 
             public int Peek()
             {
-                int peek;
-
                 if (Top == null)
                 {
                     return -1;
                 }
 
-                peek = Top.Data;
-
-                return peek;
+                return Top.Data;
             }
-
 
             public bool IsEmpty()
             {
@@ -364,7 +351,122 @@ namespace DataStructures
             }
         }
 
+        public class CircularLinkedList
+        {
+            public Node Head;
+            public Node Tail;
 
+            int _size = 0;
+
+            public CircularLinkedList()
+            {
+                Head = null;
+                Tail = null;
+            }
+
+            public int Length()
+            {
+                return _size;
+            }
+
+            public bool IsEmpty()
+            {
+                return _size == 0;
+            }
+
+            public void Show()
+            {
+                if (_size == 0)
+                {
+                    Console.WriteLine("There is no element in the list");
+                }
+
+                Node temp = Head;
+
+                for (int i = 1; i <= _size; i++)
+                {
+                    Console.WriteLine(temp.Data);
+                    temp = temp.Next;
+                }
+            }
+
+            public void AddLast(int data)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    newNode.Next = newNode;
+                    Head = Tail = newNode;
+                    _size++;
+                    return;
+                }
+
+                Tail.Next = newNode;
+                newNode.Next = Head;
+                Tail = newNode;
+                _size++;
+            }
+
+            public void AddFirst(int data)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    newNode.Next = newNode;
+                    Head = Tail = newNode;
+                    _size++;
+                    return;
+                }
+
+                Tail.Next = newNode;
+                newNode.Next = Head;
+                Head = newNode;
+                _size++;
+            }
+
+            public void AddPosition(int data, int position)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    newNode.Next = newNode;
+                    Head = Tail = newNode;
+                    _size++;
+                    return;
+                }
+
+                Node temp = Head;
+
+                for (int i = 1; i < position - 1; i++)
+                {
+                    temp = temp.Next;
+                }
+
+                newNode.Next = temp.Next;
+                temp.Next = newNode;
+                _size++;
+            }
+
+            public void DeleteLast()
+            {
+                if (IsEmpty())
+                { return; }
+
+                Node temp = Head;
+
+                for (int i = 1; i <= _size - 1; i++)
+                {
+                    temp = temp.Next;
+                }
+
+                temp.Next = temp.Next.Next;
+                _size--;
+            }
+
+        }
         static void Main(string[] args)
         {
             //LinkedList linkedList = new LinkedList();
