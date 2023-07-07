@@ -6,6 +6,7 @@
         {
             public int Data;
             public Node Next;
+            public Node Previous;
 
             public Node()
             {
@@ -16,6 +17,7 @@
             {
                 Data = data;
                 Next = null;
+                Previous = null;
             }
         }
 
@@ -467,6 +469,88 @@
             }
 
         }
+
+        public class DoubleLinkedList
+        {
+            public Node Head;
+            int _size = 0;
+
+            public DoubleLinkedList()
+            {
+                Head = null;
+            }
+
+            public int Length()
+            {
+                return _size;
+            }
+
+            public bool IsEmpty()
+            {
+                return _size == 0;
+            }
+
+            public void Show()
+            {
+                if (_size == 0)
+                {
+                    Console.WriteLine("There is no element in the list");
+                }
+
+                Node temp = Head;
+
+                for (int i = 1; i <= _size; i++)
+                {
+                    Console.WriteLine(temp.Data);
+                    temp = temp.Next;
+                }
+            }
+
+
+            public void AddLast(int data)
+            {
+                Node newNode = new Node(data);
+
+                if (IsEmpty())
+                {
+                    Head = newNode;
+                    _size++;
+                    return;
+                }
+
+                Node temp = Head;
+
+                while (temp.Next != null)
+                {
+                    temp = temp.Next;
+                }
+
+                temp.Next = newNode;
+                newNode.Previous = temp;
+                _size++;
+            }
+
+            public void DeleteFirst()
+            {
+                if (IsEmpty())
+                {
+                    return;
+                }
+
+                if (Head.Next == null)
+                {
+                    Head = null;
+                    return;
+                }
+
+                Head = Head.Next;
+                Head.Next.Previous = null;
+
+            }
+
+        }
+
+
         static void Main(string[] args)
         {
             //LinkedList linkedList = new LinkedList();
