@@ -598,16 +598,41 @@ namespace DataStructures
             #endregion
 
 
-            CircleLinkedList circleLinkedList = new CircleLinkedList();
-            circleLinkedList.AddLast(1);
-            circleLinkedList.AddLast(2);
-            circleLinkedList.AddLast(3);
-            circleLinkedList.AddLast(4);
-            circleLinkedList.AddLast(5);
+            //CircleLinkedList circleLinkedList = new CircleLinkedList();
+            //circleLinkedList.AddLast(1);
+            //circleLinkedList.AddLast(2);
+            //circleLinkedList.AddLast(3);
+            //circleLinkedList.AddLast(4);
+            //circleLinkedList.AddLast(5);
 
-            circleLinkedList.AddFirst(6);
-            circleLinkedList.AddFirst(77);
-            circleLinkedList.Show();
+            //circleLinkedList.AddFirst(6);
+            //circleLinkedList.AddFirst(77);
+            //circleLinkedList.Show();
+
+            //Console.WriteLine("==========");
+            //circleLinkedList.DeleteLast();
+            //circleLinkedList.DeleteLast();
+
+            //circleLinkedList.DeleteFirst();
+            //circleLinkedList.DeleteFirst();
+            //circleLinkedList.Show();
+
+            DoubleLinkedList linkedList = new DoubleLinkedList();
+            linkedList.AddLast(0);
+            linkedList.AddLast(1);
+            linkedList.AddLast(2);
+            linkedList.AddLast(3);
+            linkedList.AddLast(4);
+            linkedList.AddLast(55);
+
+            linkedList.AddPosition(3, 333);
+
+            linkedList.AddPosition(5, 555);
+
+            linkedList.RemoveLast();
+            linkedList.RemoveLast();
+
+            linkedList.Show();
 
         }
     }
