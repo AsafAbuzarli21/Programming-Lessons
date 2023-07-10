@@ -25,6 +25,7 @@ namespace DataStructures
 
             }
 
+
             public Node(int data)
             {
                 Data = data;
