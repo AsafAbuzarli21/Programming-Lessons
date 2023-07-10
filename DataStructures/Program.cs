@@ -735,18 +735,18 @@
            //stack.Show ();
            //Console.WriteLine(stack.Peek());
 
-            Queue<int> queue = new Queue<int> (5);
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
-            queue.Enqueue(4);
-            queue.Enqueue(5);
-            queue.Show();
-            Console.WriteLine("            ");
-            //queue.Dequeue();
-            Console.WriteLine(queue.Peek());
-            Console.WriteLine("            ");
-            queue.Show();
+            //Queue<int> queue = new Queue<int> (5);
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+            //queue.Show();
+            //Console.WriteLine("            ");
+            ////queue.Dequeue();
+            //Console.WriteLine(queue.Peek());
+            //Console.WriteLine("            ");
+            //queue.Show();
         }
     }
 }
