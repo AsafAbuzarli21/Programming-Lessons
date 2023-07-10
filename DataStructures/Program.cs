@@ -204,154 +204,154 @@
             }
         }
 
-        public class Queue
-        {
-            public Node Head;
-            public Node Tail;
+        //public class Queue
+        //{
+        //    public Node Head;
+        //    public Node Tail;
 
-            public Queue()
-            {
-                Head = null;
-                Tail = null;
-            }
+        //    public Queue()
+        //    {
+        //        Head = null;
+        //        Tail = null;
+        //    }
 
-            public void Show()
-            {
-                if (Head == null)
-                {
-                    Console.WriteLine("List is empty");
-                    return;
-                }
+        //    public void Show()
+        //    {
+        //        if (Head == null)
+        //        {
+        //            Console.WriteLine("List is empty");
+        //            return;
+        //        }
 
-                Node temp = Head;
+        //        Node temp = Head;
 
-                while (temp != null)
-                {
-                    Console.WriteLine(temp.Data);
-                    temp = temp.Next;
-                }
-            }
+        //        while (temp != null)
+        //        {
+        //            Console.WriteLine(temp.Data);
+        //            temp = temp.Next;
+        //        }
+        //    }
 
-            public void Enqueue(int data)
-            {
-                var newNode = new Node(data);
+        //    public void Enqueue(int data)
+        //    {
+        //        var newNode = new Node(data);
 
-                if (Head == null)
-                {
-                    Head = newNode;
-                    Tail = newNode;
-                    return;
-                }
+        //        if (Head == null)
+        //        {
+        //            Head = newNode;
+        //            Tail = newNode;
+        //            return;
+        //        }
 
-                Tail.Next = newNode;
-                Tail = newNode;
+        //        Tail.Next = newNode;
+        //        Tail = newNode;
 
-            }
+        //    }
 
-            public int Dequeue()
-            {
-                int peek;
+        //    public int Dequeue()
+        //    {
+        //        int peek;
 
-                if (Head == null)
-                {
-                    return -1;
-                }
+        //        if (Head == null)
+        //        {
+        //            return -1;
+        //        }
 
-                peek = Head.Data;
-                Head = Head.Next;
+        //        peek = Head.Data;
+        //        Head = Head.Next;
 
-                return peek;
-            }
+        //        return peek;
+        //    }
 
-            public int Peek()
-            {
-                if (Head == null)
-                {
-                    return -1;
-                }
+        //    public int Peek()
+        //    {
+        //        if (Head == null)
+        //        {
+        //            return -1;
+        //        }
 
-                return Head.Data;
-            }
+        //        return Head.Data;
+        //    }
 
-            public bool IsEmpty()
-            {
-                if (Head == null)
-                    return true;
+        //    public bool IsEmpty()
+        //    {
+        //        if (Head == null)
+        //            return true;
 
-                return false;
-            }
-        }
+        //        return false;
+        //    }
+        //}
 
-        public class Stack
-        {
-            public Node Top;
+        //public class Stack
+        //{
+        //    public Node Top;
 
-            public Stack()
-            {
-                Top = null;
-            }
+        //    public Stack()
+        //    {
+        //        Top = null;
+        //    }
 
-            public void Show()
-            {
-                if (Top == null)
-                {
-                    Console.WriteLine("List is empty");
-                    return;
-                }
+        //    public void Show()
+        //    {
+        //        if (Top == null)
+        //        {
+        //            Console.WriteLine("List is empty");
+        //            return;
+        //        }
 
-                Node temp = Top;
+        //        Node temp = Top;
 
-                while (temp != null)
-                {
-                    Console.WriteLine(temp.Data);
-                    temp = temp.Next;
-                }
-            }
+        //        while (temp != null)
+        //        {
+        //            Console.WriteLine(temp.Data);
+        //            temp = temp.Next;
+        //        }
+        //    }
 
-            public void Push(int data)
-            {
-                var newNode = new Node(data);
+        //    public void Push(int data)
+        //    {
+        //        var newNode = new Node(data);
 
-                if (Top == null)
-                {
-                    Top = newNode;
-                    return;
-                }
+        //        if (Top == null)
+        //        {
+        //            Top = newNode;
+        //            return;
+        //        }
 
-                newNode.Next = Top;
-                Top = newNode;
-            }
+        //        newNode.Next = Top;
+        //        Top = newNode;
+        //    }
 
-            public int Pop()
-            {
-                int peek;
+        //    public int Pop()
+        //    {
+        //        int peek;
 
-                if (Top == null)
-                {
-                    return -1;
-                }
+        //        if (Top == null)
+        //        {
+        //            return -1;
+        //        }
 
-                peek = Top.Data;
-                Top = Top.Next;
+        //        peek = Top.Data;
+        //        Top = Top.Next;
 
-                return peek;
-            }
+        //        return peek;
+        //    }
 
-            public int Peek()
-            {
-                if (Top == null)
-                {
-                    return -1;
-                }
+        //    public int Peek()
+        //    {
+        //        if (Top == null)
+        //        {
+        //            return -1;
+        //        }
 
-                return Top.Data;
-            }
+        //        return Top.Data;
+        //    }
 
-            public bool IsEmpty()
-            {
-                return Top == null;
-            }
-        }
+        //    public bool IsEmpty()
+        //    {
+        //        return Top == null;
+        //    }
+        //}
 
         public class CircularLinkedList
         {
@@ -475,6 +475,8 @@
             public Node Head;
             int _size = 0;
 
+            public Node Tail;
+
             public DoubleLinkedList()
             {
                 Head = null;
@@ -529,7 +531,7 @@
                 newNode.Previous = temp;
                 _size++;
             }
-
+            
             public void DeleteFirst()
             {
                 if (IsEmpty())
@@ -547,10 +549,129 @@
                 Head.Next.Previous = null;
 
             }
-
         }
+        /*mine*/
+        public class Stack<T>
+        {
+            public T[] array;
+            public int top;
 
+            public Stack(int capacity)
+            {
+                array = new T[capacity];
+                top = -1;
+            }
+            public bool IsEmpty() 
+            {
+               return array.Length == 0;
+            }
+            public bool IsFull()
+            {
+                return array.Length == array.Length;
+            }
+            public void Show()
+            {
+                if(IsEmpty())
+                {
+                    Console.WriteLine("Stack is empty");
+                    return;
+                }
+                for(int i = top; i >= 0; i--)
+                {
+                    Console.WriteLine(array[i]);
+                }   
 
+            }
+            public void Push (T item)
+            {
+              if(!IsFull())
+              {
+                    Console.WriteLine("Stack is full");
+              }
+                array[++top] = item;
+            }
+            public T Pop()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("Stack is empty");
+                }
+                Console.WriteLine($"Poped element - {top + 1}");
+                T item = array[top];
+                array[top--] = default(T);
+                return item;
+            }
+            public T Peek()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("Stack is empty");
+                }
+                return array[top];
+            }
+            
+        }
+        public class Queue<T>
+        {
+            public T[] array;
+            public int head;
+            public int tail;
+            public int count;
+            public Queue(int capacity)
+            {
+                array = new T[capacity];
+                head = 0;
+                tail = -1;
+                count = 0;
+            }
+            public bool IsEmpty()
+            {
+                return count == 0;
+            }
+            public bool IsFull()
+            {
+                return count == array.Length;
+            }
+            public void Enqueue(T item)
+            {
+                tail = (tail + 1) % array.Length;
+                array[tail] = item;
+                count++;
+            }
+            public T Dequeue()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("Queue is empty.");
+                }
+                T item = array[head];
+                head = (head + 1) % array.Length;
+                count--;
+                return item;
+            }
+            public void Show()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("Queue is empty"); return;
+                }
+                int current = head;
+                for (int i = 0; i < count; i++)
+                {
+                    Console.WriteLine(array[current]);
+                    current = (current + 1) % array.Length;
+                }
+            }
+            public T Peek()
+            {
+                if (IsEmpty())
+                {
+                    Console.WriteLine("Queue is empty."); 
+                }
+                return array[head];
+            }
+        }
+        
         static void Main(string[] args)
         {
             //LinkedList linkedList = new LinkedList();
@@ -570,27 +691,62 @@
 
             //linkedList.ShowElements();
 
-            Queue queue = new Queue();
+            //Queue queue = new Queue();
 
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+
+            //queue.Show();
+
+            //Console.WriteLine("==============");
+
+            //Console.WriteLine(queue.Dequeue());
+            //Console.WriteLine(queue.Dequeue());
+            //Console.WriteLine(queue.Dequeue());
+
+            //Console.WriteLine("=================");
+
+            //queue.Show();
+
+            //Console.WriteLine(queue.Peek());
+
+            //DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+            //doubleLinkedList.AddLast(1);
+            //doubleLinkedList.AddLast(2);
+            //doubleLinkedList.AddLast(3);
+            //doubleLinkedList.AddLast(4);
+            //doubleLinkedList.AddLast(5);
+            //doubleLinkedList.Show();
+            //Console.WriteLine("                   ");
+
+           //Stack<int> stack = new Stack<int> (5);
+           //stack.Push (1);
+           // stack.Push (2);
+           // stack.Push (3);
+           // stack.Push (4);
+           // stack.Push (5);
+           // stack.Show();
+           //Console.WriteLine("                        ");
+           //stack.Pop();
+           //Console.WriteLine("                        ");
+           //stack.Show ();
+           //Console.WriteLine(stack.Peek());
+
+            Queue<int> queue = new Queue<int> (5);
             queue.Enqueue(1);
             queue.Enqueue(2);
             queue.Enqueue(3);
             queue.Enqueue(4);
             queue.Enqueue(5);
-
             queue.Show();
-
-            Console.WriteLine("==============");
-
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-            Console.WriteLine(queue.Dequeue());
-
-            Console.WriteLine("=================");
-
-            queue.Show();
-
+            Console.WriteLine("            ");
+            //queue.Dequeue();
             Console.WriteLine(queue.Peek());
+            Console.WriteLine("            ");
+            queue.Show();
         }
     }
 }
